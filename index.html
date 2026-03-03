@@ -4,7 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shobhit Anand | Portfolio</title>
+
+    >
+    <title>Shobhit Portfolio</title>
+    <meta name="description"
+        content="Welcome to Shobhit's personal portfolio showcasing projects in web development, design, and more.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="/image/shobhit.PNG" />
 
     <!-- CDN Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -200,7 +206,8 @@
                         <p class="card-text">Udemy</p>
                         <p class="text-muted small">2024</p>
 
-                        <a href="Certificate/c-programming.pdf" target="_blank" class="btn btn-outline-success btn-sm mt-2">
+                        <a href="Certificate/c-programming.pdf" target="_blank"
+                            class="btn btn-outline-success btn-sm mt-2">
                             View Certificate
                         </a>
                     </div>
@@ -233,8 +240,7 @@
                         <p class="card-text">Google</p>
                         <p class="text-muted small">2024</p>
 
-                        <a href="Certificate/dm.pdf" target="_blank"
-                            class="btn btn-outline-success btn-sm mt-2">
+                        <a href="Certificate/dm.pdf" target="_blank" class="btn btn-outline-success btn-sm mt-2">
                             View Certificate
                         </a>
                     </div>
@@ -250,8 +256,7 @@
                         <p class="card-text">Freedom Employability Academy</p>
                         <p class="text-muted small">2021</p>
 
-                        <a href="Certificate/english.pdf" target="_blank"
-                            class="btn btn-outline-success btn-sm mt-2">
+                        <a href="Certificate/english.pdf" target="_blank" class="btn btn-outline-success btn-sm mt-2">
                             View Certificate
                         </a>
                     </div>
@@ -284,8 +289,10 @@
                                 <p>Responsive school management website with admission form.</p>
 
                                 <div class="project-buttons">
-                                    <a href="https://greenmeadowssecondaryschool.vercel.app/" class="btn btn-sm">Live</a>
-                                    <a href="https://github.com/Shobhit254/greenmeadowssecondaryschool.git" class="btn btn-sm">GitHub</a>
+                                    <a href="https://greenmeadowssecondaryschool.vercel.app/"
+                                        class="btn btn-sm">Live</a>
+                                    <a href="https://github.com/Shobhit254/greenmeadowssecondaryschool.git"
+                                        class="btn btn-sm">GitHub</a>
                                 </div>
                             </div>
                         </div>
@@ -298,55 +305,55 @@
     <!-- Blogs -->
 
     <section id="blog" class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-5">Insights & Learning</h2>
+        <div class="container">
+            <h2 class="text-center mb-5">Insights & Learning</h2>
 
-        <div class="row g-4">
+            <div class="row g-4">
 
-            <!-- Blog Card -->
-            <div class="col-md-4">
-                <div class="blog-card">
-                    <h5>Building My School Website</h5>
-                    <p class="short-text">
-                        A quick overview of how I designed and deployed a responsive school website.
-                    </p>
-
-                    <div class="full-text">
-                        <p>
-                            I started by planning the layout, creating wireframes, and then developing
-                            the frontend using HTML, CSS, Bootstrap and React.
-                            After optimization and testing, I deployed it using Vercel.
-                            This project improved my responsive design and deployment skills.
+                <!-- Blog Card -->
+                <div class="col-md-4">
+                    <div class="blog-card">
+                        <h5>Building My School Website</h5>
+                        <p class="short-text">
+                            A quick overview of how I designed and deployed a responsive school website.
                         </p>
+
+                        <div class="full-text">
+                            <p>
+                                I started by planning the layout, creating wireframes, and then developing
+                                the frontend using HTML, CSS, Bootstrap and React.
+                                After optimization and testing, I deployed it using Vercel.
+                                This project improved my responsive design and deployment skills.
+                            </p>
+                        </div>
+
+                        <button class="read-toggle">Read More</button>
                     </div>
-
-                    <button class="read-toggle">Read More</button>
                 </div>
-            </div>
 
-            <!-- Duplicate for more blogs -->
-            <div class="col-md-4">
-                <div class="blog-card">
-                    <h5>Data Analytics Simulation Experience</h5>
-                    <p class="short-text">
-                        My experience completing Deloitte's Data Analytics simulation.
-                    </p>
-
-                    <div class="full-text">
-                        <p>
-                            During the simulation, I worked on real-world business scenarios,
-                            analyzed datasets, created dashboards, and presented insights.
-                            It strengthened my analytical thinking and reporting skills.
+                <!-- Duplicate for more blogs -->
+                <div class="col-md-4">
+                    <div class="blog-card">
+                        <h5>Data Analytics Simulation Experience</h5>
+                        <p class="short-text">
+                            My experience completing Deloitte's Data Analytics simulation.
                         </p>
+
+                        <div class="full-text">
+                            <p>
+                                During the simulation, I worked on real-world business scenarios,
+                                analyzed datasets, created dashboards, and presented insights.
+                                It strengthened my analytical thinking and reporting skills.
+                            </p>
+                        </div>
+
+                        <button class="read-toggle">Read More</button>
                     </div>
-
-                    <button class="read-toggle">Read More</button>
                 </div>
-            </div>
 
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="container py-5">
@@ -451,19 +458,19 @@
         });
     </script>
     <script>
-document.querySelectorAll(".read-toggle").forEach(button => {
-    button.addEventListener("click", function() {
-        const card = this.closest(".blog-card");
-        card.classList.toggle("active");
+        document.querySelectorAll(".read-toggle").forEach(button => {
+            button.addEventListener("click", function () {
+                const card = this.closest(".blog-card");
+                card.classList.toggle("active");
 
-        if (card.classList.contains("active")) {
-            this.innerText = "Read Less";
-        } else {
-            this.innerText = "Read More";
-        }
-    });
-});
-</script>
+                if (card.classList.contains("active")) {
+                    this.innerText = "Read Less";
+                } else {
+                    this.innerText = "Read More";
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
