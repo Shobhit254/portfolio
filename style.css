@@ -1,0 +1,562 @@
+/* ============================= */
+/* General Body */
+/* ============================= */
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+    color: #212529;
+    background-color: #f8f9fa;
+}
+
+/* ============================= */
+/* Hero Section */
+/* ============================= */
+
+.hero {
+    height: 100vh;
+    background: url('image/bg.jpg') no-repeat center center/cover;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero .text-white {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 span {
+    color: #0d6efd;
+}
+
+/* ============================= */
+/* Navbar Scroll Effect */
+/* ============================= */
+.navbar-dark .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar.scrolled {
+    background-color: #212529 !important;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #0d6efd;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* ============================= */
+/* Premium Section Headings */
+/* ============================= */
+
+h2 {
+    font-weight: 800;
+    font-size: 34px;
+    background: linear-gradient(90deg, #0d6efd, #6610f2, #0dcaf0);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 50px;
+    animation: gradientMove 4s linear infinite;
+}
+
+@keyframes gradientMove {
+    to {
+        background-position: 200% center;
+    }
+}
+
+h2::after {
+    content: "";
+    width: 50%;
+    height: 4px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #0d6efd, #6610f2);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+
+/* ============================= */
+/* Premium Cards */
+/* ============================= */
+
+.card {
+    border: none;
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.85);
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    transform: skewX(-25deg);
+    transition: 0.8s;
+}
+
+.card:hover::before {
+    left: 120%;
+}
+
+.card:hover {
+    transform: translateY(-15px) scale(1.05) rotateX(4deg);
+    box-shadow: 0 20px 50px rgba(102, 16, 242, 0.35);
+}
+
+/* ============================= */
+/* ULTRA PREMIUM CERTIFICATES V2 */
+/* ============================= */
+
+#certificates {
+    position: relative;
+    padding: 100px 0;
+    background: linear-gradient(135deg, #eef2ff, #f8f9ff);
+    overflow: hidden;
+}
+
+/* Floating Background Blobs */
+#certificates::before,
+#certificates::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(102,16,242,0.25), transparent 70%);
+    border-radius: 50%;
+    animation: floatBlob 8s ease-in-out infinite;
+    z-index: 0;
+}
+
+#certificates::before {
+    top: -100px;
+    left: -100px;
+}
+
+#certificates::after {
+    bottom: -120px;
+    right: -120px;
+    animation-delay: 4s;
+}
+
+@keyframes floatBlob {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-40px); }
+}
+
+/* Heading */
+#certificates h2 {
+    font-size: 38px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 70px;
+    background: linear-gradient(90deg, #0d6efd, #6610f2, #0dcaf0);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 4s linear infinite;
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes gradientMove {
+    to { background-position: 200% center; }
+}
+
+/* Cards */
+#certificates .card {
+    border: none;
+    border-radius: 22px;
+    backdrop-filter: blur(18px);
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+/* Shine Sweep */
+#certificates .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.7), transparent);
+    transform: skewX(-25deg);
+    transition: 0.8s;
+}
+
+#certificates .card:hover::before {
+    left: 120%;
+}
+
+/* Hover Lift */
+#certificates .card:hover {
+    transform: translateY(-18px) scale(1.05);
+    box-shadow: 0 25px 60px rgba(102,16,242,0.35);
+}
+
+/* Icon Animation */
+#certificates .card i {
+    transition: 0.4s ease;
+}
+
+#certificates .card:hover i {
+    transform: scale(1.25) rotate(10deg);
+}
+
+/* Buttons */
+#certificates .btn {
+    border-radius: 50px;
+    padding: 10px 28px;
+    font-weight: 600;
+    border: none;
+    background: linear-gradient(45deg, #0d6efd, #6610f2);
+    color: white;
+    transition: 0.3s ease;
+}
+
+#certificates .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(13,110,253,0.4);
+}
+
+.text-1 {
+    background: linear-gradient(45deg, #ff6b6b, #ff9f43);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-2 {
+    background: linear-gradient(45deg, #6c5ce7, #00cec9);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-3 {
+    background: linear-gradient(45deg, #00b894, #0984e3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-4 {
+    background: linear-gradient(45deg, #fdcb6e, #e84393);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ============================= */
+/* Animated Profile Border */
+/* ============================= */
+
+.profile-wrapper {
+    position: relative;
+    width: 190px;
+    height: 190px;
+    margin: 0 auto;
+}
+
+.rotating-border {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: conic-gradient(#0d6efd,
+            #00ffcc,
+            #198754,
+            #6f42c1,
+            #0d6efd);
+    animation: spin 3s linear infinite;
+    z-index: 0;
+}
+
+.profile-img {
+    position: absolute;
+    inset: 8px;
+    /* border thickness */
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Border Rotation Animation */
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ============================= */
+/* Social Media Icons */
+/* ============================= */
+/* ============================= */
+/*        SOCIAL ICONS CSS       */
+/* ============================= */
+
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+/* Default Icon Style */
+.social-icons a {
+    position: relative;
+    color: #ffffff;
+    margin-left: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Animation */
+.social-icons a:hover {
+    transform: translateY(-3px) scale(1.1);
+}
+
+/* Brand Colors on Hover */
+.social-icons a:hover .fa-github {
+    color: #ffffff;
+}
+
+.social-icons a:hover .fa-instagram {
+    color: #e1306c;
+}
+
+.social-icons a:hover .fa-linkedin {
+    color: #0077b5;
+}
+
+.social-icons a:hover .fa-facebook {
+    color: #1877f2;
+}
+
+.social-icons a:hover .fa-youtube {
+    color: #ff0000;
+}
+
+/* Click / Focus Fix */
+.social-icons a:focus,
+.social-icons a:active {
+    outline: none;
+    box-shadow: none;
+    color: #ffffff;
+}
+
+/* Animated Underline Effect */
+.social-icons a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.social-icons a:hover::after {
+    width: 100%;
+}
+
+
+/* 3D Perspective Container */
+.tilt-card {
+    transform-style: preserve-3d;
+    transition: transform 0.2s ease;
+    will-change: transform;
+}
+
+
+/* ============================= */
+/* ULTRA PREMIUM PROJECT SECTION */
+/* ============================= */
+
+#projects {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8f9ff, #eef2ff);
+}
+
+/* Project Card */
+.project-card {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.4s ease;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.project-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 60px rgba(102,16,242,0.35);
+}
+
+/* Image */
+.project-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-img img {
+    width: 100%;
+    transition: 0.5s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay */
+.project-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+    color: white;
+    transform: translateY(100%);
+    transition: 0.4s ease;
+}
+
+.project-card:hover .project-overlay {
+    transform: translateY(0);
+}
+
+/* Buttons */
+.project-buttons .btn {
+    background: linear-gradient(45deg, #0d6efd, #6610f2);
+    border: none;
+    border-radius: 30px;
+    padding: 6px 18px;
+    color: white;
+    margin-right: 8px;
+    transition: 0.3s ease;
+}
+
+.project-buttons .btn:hover {
+    transform: scale(1.1);
+}
+
+
+/* Blogs */
+
+/* ============================= */
+/* ULTRA PREMIUM MINI BLOG */
+/* ============================= */
+
+#blog {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #eef2ff, #f8f9ff);
+    position: relative;
+}
+
+/* Animated Gradient Heading */
+#blog h2 {
+    font-size: 38px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #0d6efd, #6610f2, #0dcaf0);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 4s linear infinite;
+}
+
+@keyframes gradientMove {
+    to { background-position: 200% center; }
+}
+
+/* Glass Blog Card */
+.blog-card {
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    transition: 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 60px rgba(102,16,242,0.35);
+}
+
+/* Hidden Full Text */
+.full-text {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+
+.blog-card.active .full-text {
+    max-height: 500px;
+    margin-top: 15px;
+}
+
+/* Button */
+.read-toggle {
+    margin-top: 15px;
+    border: none;
+    background: linear-gradient(45deg, #0d6efd, #6610f2);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.read-toggle:hover {
+    transform: scale(1.1);
+}
